@@ -61,15 +61,30 @@
 }
 
 .resizer {
-  width: 10px; 
+  width: 5px; 
   height: 100%; 
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: darkblue; 
+  background-color: white; 
   position: absolute;
   right: calc(50% - 5px); 
   top: 0; 
   cursor: ew-resize; 
   z-index: 100;
+}
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.prev_icon,
+.next_icon {
+  padding: 10px;
 }

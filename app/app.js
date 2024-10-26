@@ -16,7 +16,7 @@ function resize(e) {
   const leftWidth = positon - containerPositionLeft;
 
   if (positon > containerPositionLeft + containerWidth) {
-    resizer.style.left = containerWidth - 10 + "px";
+    resizer.style.left = containerWidth + "px";
     left.style.width = containerWidth + "px";
     return;
   } else if (positon < containerPositionLeft + 10) {
