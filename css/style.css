@@ -26,7 +26,7 @@
   left: 0;
   width: 500px;
   height: 100%;
-  background-image: url("../after.PNG");
+  background-image: url("../assets/after.PNG");
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -46,7 +46,7 @@
   right: 0;
   width: 500px;
   height: 100%;
-  background-image: url("../before.PNG");
+  background-image: url("../assets/before.PNG");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -61,12 +61,15 @@
 }
 
 .resizer {
-  width: 10px; /* Boyut */
-  height: 100%; /* Yükseklik */
-  background-color: darkblue; /* Tutucu rengi */
+  width: 10px; 
+  height: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: darkblue; 
   position: absolute;
-  right: calc(50% - 5px); /* Sağda konumlandır */
-  top: 0; /* Üstten sıfırdan başla */
-  cursor: ew-resize; /* Sağdan ve soldan boyutlandırma göstergesi */
+  right: calc(50% - 5px); 
+  top: 0; 
+  cursor: ew-resize; 
   z-index: 100;
 }
