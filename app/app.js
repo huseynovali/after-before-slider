@@ -1,7 +1,7 @@
 const resizer = document.getElementById("resizer");
 const container = document.getElementById("container");
-const left = document.querySelector(".left");
-const right = document.querySelector(".right");
+const after = document.querySelector(".after");
+const before = document.querySelector(".before");
 resizer.addEventListener("mousedown", initResize);
 
 function initResize(e) {
@@ -12,20 +12,20 @@ function initResize(e) {
 function resize(e) {
   const positon = e.clientX;
   const containerWidth = container.offsetWidth;
-  const containerPositionLeft = container.getBoundingClientRect().left;
-  const leftWidth = positon - containerPositionLeft;
+  const containerPositionafter = container.getBoundingClientRect().left;
+  const afterWidth = positon - containerPositionafter;
 
-  if (positon > containerPositionLeft + containerWidth) {
+  if (positon > containerPositionafter + containerWidth) {
     resizer.style.left = containerWidth + "px";
-    left.style.width = containerWidth + "px";
+    after.style.width = containerWidth + "px";
     return;
-  } else if (positon < containerPositionLeft + 10) {
+  } else if (positon < containerPositionafter + 10) {
     resizer.style.left = 0 + "px";
-    left.style.width = 0 + "px";
+    after.style.width = 0 + "px";
     return;
   }
-  left.style.width = `${leftWidth}px`;
-  resizer.style.left = `${leftWidth}px`;
+  after.style.width = `${afterWidth}px`;
+  resizer.style.left = `${afterWidth}px`;
 }
 
 function stopResize() {
