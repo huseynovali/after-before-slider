@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 80vh;
+  width: 500px;
+  border: 1px solid #aaa;
+  overflow: hidden;
+}
+
+.left_image {
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 100%;
+  background-image: url("../after.PNG");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  z-index: 10;
+}
+.left {
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.right_image {
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 100%;
+  background-image: url("../before.PNG");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.right {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.resizer {
+  width: 10px; /* Boyut */
+  height: 100%; /* Yükseklik */
+  background-color: darkblue; /* Tutucu rengi */
+  position: absolute;
+  right: calc(50% - 5px); /* Sağda konumlandır */
+  top: 0; /* Üstten sıfırdan başla */
+  cursor: ew-resize; /* Sağdan ve soldan boyutlandırma göstergesi */
+  z-index: 100;
+}
